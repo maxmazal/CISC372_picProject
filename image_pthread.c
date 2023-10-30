@@ -91,6 +91,8 @@ void* threadConvolute(void *arg){
     int endRow = threadData->endRow;
     enum KernelTypes type = threadData->type; 
 
+    // printf("Starting at %d, ending at %d\n",startRow, endRow);
+
     //copy pasted from sample code & changed values to correspond to the struct's variables
     for (int row = startRow; row < endRow; row++) {
         for (int pix = 0; pix < srcImage->width; pix++) {
@@ -181,21 +183,20 @@ int main(int argc,char** argv){
         pthread_join(threadHandles[i], NULL);
     }
 
+    // printf("convolute done\n");
 
-    //frees the dynamically allocated memory
-    free(threadData);
-    free(threadHandles);
+    // convolute(&srcImage,&destImage,algorithms[type]);
 
-
-
-
-
-    convolute(&srcImage,&destImage,algorithms[type]);
     stbi_write_png("output.png",destImage.width,destImage.height,destImage.bpp,destImage.data,destImage.bpp*destImage.width);
     stbi_image_free(srcImage.data);
     
     free(destImage.data);
     t2=time(NULL);
     printf("Took %ld seconds\n",t2-t1);
+
+    //frees the dynamically allocated memory
+    free(threadData);
+    free(threadHandles);
+
    return 0;
 }
