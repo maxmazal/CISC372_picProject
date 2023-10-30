@@ -1,5 +1,4 @@
-//initial commit
-
+#include <pthread.h>
 #include <stdio.h>
 #include <stdint.h>
 #include <time.h>
@@ -57,7 +56,7 @@ uint8_t getPixelValue(Image* srcImage,int x,int y,int bit,Matrix algorithm){
 //Parameters: srcImage: The image being convoluted
 //            destImage: A pointer to a  pre-allocated (including space for the pixel array) structure to receive the convoluted image.  It should be the same size as srcImage
 //            algorithm: The kernel matrix to use for the convolution
-//Returns: Nothing
+//Returns: Nothing  
 void convolute(Image* srcImage,Image* destImage,Matrix algorithm){
     int row,pix,bit,span;
     span=srcImage->bpp*srcImage->bpp;
