@@ -1,0 +1,9 @@
+Script started on Mon Oct 30 14:29:42 2023
+]0;maxmazal@r1n17.darwin:~/CISC372_picProject[?1034h[maxmazal@r1n17 CISC372_picProject]$ exitsrun ./image_pthread pic1.jpg edge 4[6Pomp pic1.jpg edge
+Took 6 seconds
+]0;maxmazal@r1n17.darwin:~/CISC372_picProject[maxmazal@r1n17 CISC372_picProject]$ srun ./image_omp pic1.jpg edgeexit[Ksrun ./image_pthread pic1.jpg edge 4
+Took 8 seconds
+]0;maxmazal@r1n17.darwin:~/CISC372_picProject[maxmazal@r1n17 CISC372_picProject]$ exit
+exit
+
+Script done on Mon Oct 30 14:30:06 2023

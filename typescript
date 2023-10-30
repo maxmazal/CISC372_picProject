@@ -1,0 +1,19 @@
+Script started on Mon Oct 30 14:27:46 2023
+]0;maxmazal@r1n17.darwin:~/CISC372_picProject[?1034h[maxmazal@r1n17 CISC372_picProject]$ vpkg_require cuda[1Pgcccuda[Ksrun ./image_omp
+Usage: image <filename> <type>
+	where type is one of (edge,sharpen,blur,gauss,emboss,identity)
+srun: error: r1n17: task 0: Exited with exit code 255
+]0;maxmazal@r1n17.darwin:~/CISC372_picProject[maxmazal@r1n17 CISC372_picProject]$ srun ./image_ompvpkg_require cuda[1Psrun ./image_omp[Ksrun ./image_omp pic1.jpg 1   emboss       dge
+Took 7 seconds
+]0;maxmazal@r1n17.darwin:~/CISC372_picProject[maxmazal@r1n17 CISC372_picProject]$ srun ./image_omp pic1.jpg edge
+Took 6 seconds
+]0;maxmazal@r1n17.darwin:~/CISC372_picProject[maxmazal@r1n17 CISC372_picProject]$ srun ./image_omp pic1.jpg edge
+Took 7 seconds
+]0;maxmazal@r1n17.darwin:~/CISC372_picProject[maxmazal@r1n17 CISC372_picProject]$ srun ./image_omp pic1.jpg edge
+Took 7 seconds
+]0;maxmazal@r1n17.darwin:~/CISC372_picProject[maxmazal@r1n17 CISC372_picProject]$ srun ./image_omp pic1.jpg edgee                 t pthread pic1.jpg edge 4
+Took 8 seconds
+]0;maxmazal@r1n17.darwin:~/CISC372_picProject[maxmazal@r1n17 CISC372_picProject]$ exit
+exit
+
+Script done on Mon Oct 30 14:29:36 2023
